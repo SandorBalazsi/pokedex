@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeDex</title>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image" href="img/pkm-logo.png">
+</head>
+<body onload="loadPokemon()">
+    
+    <header>
+        <div class="menu-left">
+        <img src="img/pkm-logo.png" alt="">
+        <h2>PokeDEX</h2>
+        </div>
+        <form>
+            <input class="search_pok" id="search" onkeyup="checkInputLength()" type="text" placeholder="Search your Pokemon">
+           
+        </form>
+    </header>
+    <div id="popupBg" class="popup-bg d-none" onclick="closeDialog()">
+        <img class="close" src="img/close.png">
+        <img id="back" class="back" src="img/back.png" onclick="loadPreviousPok()">
+        <div id="popupContent" class="popup_content" onclick="doNotClose(event)">
+        </div>
+        <img id="next" class="next" src="img/next.png" onclick="loadNextPok()">
+    </div>
+    <img class="bg_ball" src="img/pokeball.png">
+    <div class="content" id="content">
+    </div>
+    <button id="load_more" onclick="loadMorePokemon()" class="button-24" role="button">Load more Pokemon</button>
+<footer>
+</footer>
+    
+</body>
+</html>
